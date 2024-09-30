@@ -20,4 +20,34 @@ const { title } = Astro.props
 		<slot />
 	</body>
 </html>
-<style is:global></style>
+<style is:global>
+	body {
+		font-family: "Spacemono", monospace;
+		background-color: rgb(0, 33, 54);
+		color: white;
+	}
+
+	.image {
+		background-image: url("/orellana.webp");
+		background-position: center;
+		background-size: cover;
+	}
+	@font-face {
+		font-family: "Kaushan";
+		src: url("/fonts/KaushanScript-Regular.ttf") format("truetype");
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "Spacemono";
+		src: url("/fonts/SpaceMono-Regular.ttf") format("truetype");
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "SpacemonoBold";
+		src: url("/fonts/SpaceMono-Bold.ttf") format("truetype");
+		font-weight: bold;
+		font-style: normal;
+	}
+</style>
