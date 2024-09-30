@@ -2,7 +2,13 @@
 export default {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				kaushan: ["Kaushan", "sans-serif"],
+				spacemono: ["Spacemono", "monospace"],
+				spacemonobold: ["SpacemonoBold", "monospace"],
+			},
+		},
 	},
 	plugins: [],
 }
