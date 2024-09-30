@@ -1,0 +1,54 @@
+---
+const { puesto, detalles, descripcion, posicion, align, row } = Astro.props
+---
+
+<div
+	class:list=`sm:col-start-${posicion} relative my-8 sm:row-start-${row} sm:mx-10 ml-16 flex flex-col sm:block justify-center sm:text-${align}`
+>
+	<div
+		class:list={[
+			"absolute -left-[2.7rem] top-[2rem] z-10 flex h-[3rem] w-[3rem] -translate-x-1/2 transform items-center justify-center rounded-full bg-[#31546a] sm:hidden",
+		]}
+	>
+		<svg
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class="icon icon-tabler icons-tabler-outline icon-tabler-briefcase-2"
+			><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+				d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z"
+			></path><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"></path></svg
+		>
+	</div>
+	<div
+		class:list={[
+			"absolute top-[2rem] z-10 hidden h-[3rem] w-[3rem] -translate-x-1/2 transform items-center justify-center rounded-full bg-[#31546a] sm:flex",
+			posicion === "1" ? "sm:-right-[5.5rem]" : "sm:-left-[2.5rem]",
+		]}
+	>
+		<svg
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class="icon icon-tabler icons-tabler-outline icon-tabler-briefcase-2"
+			><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+				d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z"
+			></path><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"></path></svg
+		>
+	</div>
+	<h3 class="mb-3 text-2xl">{puesto}</h3>
+	<span class="text-base text-gray-300">{detalles}</span>
+	<p class="mt-3 text-base text-gray-300">
+		{descripcion}
+	</p>
+</div>

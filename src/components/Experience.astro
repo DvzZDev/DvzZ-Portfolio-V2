@@ -1,0 +1,87 @@
+---
+import CardExp from "./CardExp.astro"
+---
+
+<section class="mb-32 flex flex-col items-center justify-center px-6">
+	<h2 class="my-20 text-center text-5xl sm:my-28">Trayectoria</h2>
+	<div class="relative h-full max-w-[70rem]">
+		<h4
+			class="z-10 w-fit rounded-md bg-[#041723] p-2 font-spacemonobold text-xl sm:m-auto"
+		>
+			EXPERIENCIA
+		</h4>
+
+		<div
+			class="absolute left-5 -z-10 h-full w-[1px] -translate-x-1/2 transform bg-gray-700 sm:left-1/2"
+		>
+		</div>
+
+		<div class="flex w-full grid-cols-2 flex-col sm:grid sm:grid-rows-3">
+			<CardExp
+				puesto="Junior Full Stack"
+				detalles="AGR Baits - Jun 2024 - Actualmente"
+				descripcion="Responsable del desarrollo integral del sitio web, abarcando front-end, back-end y seguridad. Colaboración estrecha con el CEO para la mejora continua de la presencia en línea de la marca."
+				posicion="1"
+				align="right"
+				row="1"
+				icon=""
+			/>
+			<CardExp
+				puesto="Técnico de Soporte (Prácticas)"
+				detalles="Fractália - Mar 2023 - Jun 2023"
+				descripcion="Soporte técnico remoto a usuarios de Ferrovial Es, resolución de incidencias y mantenimiento de equipos. Colaboración en la migración de servidores."
+				posicion="2"
+				align="left"
+				row="2"
+				icon="0"
+			/>
+			<CardExp
+				puesto="Técnico de Hardware"
+				detalles="Vartex S.L - May 2021 - Jun 2021"
+				descripcion="Ensamblaje de equipos, diagnóstico y reparación de hardware. Atención al cliente y venta de productos."
+				posicion="1"
+				align="right"
+				row="3"
+			/>
+		</div>
+		<h4
+			class="bg-[#041723] z-10 w-fit rounded-md p-2 font-spacemonobold text-xl sm:m-auto"
+		>
+			EDUCACIÓN
+		</h4>
+		<div class="flex w-full grid-cols-2 flex-col sm:grid sm:grid-rows-4">
+			<CardExp
+				puesto="Grado Superior en Desarrollo de Aplicaciones Web"
+				detalles="Ilerna - Feb 2024 - Actualmente"
+				descripcion="Formación en desarrollo web full stack, con especialización en tecnologías front-end y back-end. Proyectos en equipo y prácticas en empresa."
+				posicion="2"
+				align="right"
+				row="1"
+			/>
+			<CardExp
+				puesto="Grado Medio en Sistemas Microinformáticos y Redes"
+				detalles="Salesianas - Sep 2021 - Jun 2023"
+				descripcion="Formación integral en montaje y mantenimiento de equipos, redes, sistemas operativos y bases en ciberseguridad, concluida con prácticas en empresa => Ferrovial Es."
+				posicion="1"
+				align="right"
+				row="2"
+			/>
+			<CardExp
+				puesto="Educación Secundaria Obligatoria"
+				detalles="Salesianas - Convalidacion Grado Medio"
+				descripcion="Titulo convalidado por la obtención del Grado Medio en Sistemas Microinformáticos y Redes."
+				posicion="2"
+				align="right"
+				row="3"
+			/>
+			<CardExp
+				puesto="Formación Profesional Básica en Informática"
+				detalles="Salesianas - Sep 2019 - Jun 2021"
+				descripcion="Formación en informática básica, ofimática y primeros pasos en programación."
+				posicion="1"
+				align="right"
+				row="4"
+			/>
+		</div>
+	</div>
+</section>
