@@ -3,7 +3,7 @@ const { puesto, detalles, descripcion, posicion, align, row } = Astro.props
 ---
 
 <div
-	class:list=`sm:col-start-${posicion} relative my-8 sm:row-start-${row} sm:mx-10 ml-16 flex flex-col sm:block justify-center sm:text-${align}`
+	class:list=`sm:col-start-${posicion} animation relative my-8 sm:row-start-${row} sm:mx-10 ml-16 flex flex-col sm:block justify-center sm:text-${align}`
 >
 	<div
 		class:list={[
@@ -47,8 +47,45 @@ const { puesto, detalles, descripcion, posicion, align, row } = Astro.props
 		>
 	</div>
 	<h3 class="mb-3 text-2xl">{puesto}</h3>
-	<span class="text-base text-gray-300">{detalles}</span>
+	<span class="text-base text-gray-400">{detalles}</span>
 	<p class="mt-3 text-base text-gray-300">
 		{descripcion}
 	</p>
 </div>
+<style>
+	.animation {
+		opacity: 0;
+		transition: opacity 1.5s;
+	}
+
+	.scroll-animation {
+		opacity: 1;
+	}
+</style>
+
+<script>
+	function setupAnimations() {
+		const elementsToAnimate = document.querySelectorAll(".animation")
+
+		const observer = new IntersectionObserver(
+			(entries, observer) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						// Agrega la animación cuando el elemento es visible en el viewport
+						entry.target.classList.add("scroll-animation")
+
+						// Deja de observar el elemento si ya se ha animado
+						observer.unobserve(entry.target)
+					}
+				})
+			},
+			{ threshold: 0.8 } // El umbral puede ser ajustado según tu necesidad
+		)
+
+		elementsToAnimate.forEach((element) => {
+			observer.observe(element)
+		})
+	}
+
+	document.addEventListener("DOMContentLoaded", setupAnimations)
+</script>
