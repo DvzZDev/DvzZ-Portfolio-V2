@@ -1,5 +1,6 @@
 ---
 import CardExp from "./CardExp.astro"
+import CardVacia from "./CardVacia.astro"
 ---
 
 <section class="flex flex-col items-center justify-center px-6">
@@ -26,6 +27,7 @@ import CardExp from "./CardExp.astro"
 				row="1"
 				icon=""
 			/>
+			<CardVacia posicion="2" row="1" />
 			<CardExp
 				puesto="Técnico de Soporte (Prácticas)"
 				detalles="Fractália - Mar 2023 - Jun 2023"
@@ -35,6 +37,8 @@ import CardExp from "./CardExp.astro"
 				row="2"
 				icon="0"
 			/>
+			<CardVacia posicion="1" row="2" />
+
 			<CardExp
 				puesto="Técnico de Hardware"
 				detalles="Vartex S.L - May 2021 - Jun 2021"
@@ -43,13 +47,15 @@ import CardExp from "./CardExp.astro"
 				align="right"
 				row="3"
 			/>
+			<CardVacia posicion="2" row="3" />
 		</div>
 		<h4
 			class="z-10 w-fit rounded-md bg-[#041723] p-2 font-spacemonobold text-xl sm:m-auto"
 		>
 			EDUCACIÓN
 		</h4>
-		<div class="flex w-full grid-cols-2 flex-col sm:grid sm:grid-rows-4">
+		<div class="flex w-full grid-cols-2 flex-col sm:grid sm:grid-rows-3">
+			<CardVacia posicion="1" row="1" />
 			<CardExp
 				puesto="Grado Superior en Desarrollo de Aplicaciones Web"
 				detalles="Ilerna - Feb 2024 - Actualmente"
@@ -58,6 +64,7 @@ import CardExp from "./CardExp.astro"
 				align="right"
 				row="1"
 			/>
+			<CardVacia posicion="2" row="2" />
 			<CardExp
 				puesto="Grado Medio en Sistemas Microinformáticos y Redes"
 				detalles="Salesianas - Sep 2021 - Jun 2023"
@@ -66,6 +73,7 @@ import CardExp from "./CardExp.astro"
 				align="right"
 				row="2"
 			/>
+			<CardVacia posicion="1" row="3" />
 			<CardExp
 				puesto="Educación Secundaria Obligatoria"
 				detalles="Salesianas - Convalidacion Grado Medio"
@@ -74,13 +82,13 @@ import CardExp from "./CardExp.astro"
 				align="right"
 				row="3"
 			/>
+			<CardVacia posicion="2" row="4" />
 			<CardExp
 				puesto="Formación Profesional Básica en Informática"
 				detalles="Salesianas - Sep 2019 - Jun 2021"
 				descripcion="Formación en informática básica, ofimática y primeros pasos en programación."
 				posicion="1"
 				align="right"
-				row="4"
 			/>
 		</div>
 	</div>

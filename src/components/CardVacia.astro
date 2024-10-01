@@ -1,0 +1,46 @@
+---
+const { posicion, align, row } = Astro.props
+---
+
+<div
+	class:list={`sm:col-start-${posicion} animation relative my-8 sm:row-start-${row} ml-16 flex flex-col justify-center sm:mx-10 sm:text-${align}`}
+>
+</div>
+
+<style>
+	.animation {
+		opacity: 0;
+		transition: opacity 1.5s;
+	}
+
+	.scroll-animation {
+		opacity: 1;
+	}
+</style>
+
+<script>
+	function setupAnimations() {
+		const elementsToAnimate = document.querySelectorAll(".animation")
+
+		const observer = new IntersectionObserver(
+			(entries, observer) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						// Agrega la animación cuando el elemento es visible en el viewport
+						entry.target.classList.add("scroll-animation")
+
+						// Deja de observar el elemento si ya se ha animado
+						observer.unobserve(entry.target)
+					}
+				})
+			},
+			{ threshold: 0.8 }
+		)
+
+		elementsToAnimate.forEach((element) => {
+			observer.observe(element)
+		})
+	}
+
+	document.addEventListener("DOMContentLoaded", setupAnimations)
+</script>
