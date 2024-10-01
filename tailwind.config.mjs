@@ -24,5 +24,6 @@ export default {
 		"sm:block",
 		"sm:flex",
 		"sm:justify-center",
+		"sm:grid-rows-4"
 	],
 }
