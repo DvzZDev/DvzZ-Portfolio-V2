@@ -4,10 +4,10 @@ import CardVacia from "./CardVacia.astro"
 ---
 
 <section class="flex flex-col items-center justify-center px-6">
-	<h2 class="my-20 text-center text-5xl sm:my-28">Trayectoria</h2>
+	<h2 class="my-20 text-center text-5xl sm:my-28 animation">Trayectoria</h2>
 	<div class="relative h-full max-w-[70rem]">
 		<h4
-			class="z-10 w-fit rounded-md bg-[#041723] p-2 font-spacemonobold text-xl sm:m-auto"
+			class="z-10 w-fit animation rounded-md bg-[#041723] p-2 font-spacemonobold text-xl sm:m-auto"
 		>
 			EXPERIENCIA
 		</h4>
@@ -50,7 +50,7 @@ import CardVacia from "./CardVacia.astro"
 			<CardVacia posicion="2" row="3" />
 		</div>
 		<h4
-			class="z-10 w-fit rounded-md bg-[#041723] p-2 font-spacemonobold text-xl sm:m-auto"
+			class="z-10 w-fit animation rounded-md bg-[#041723] p-2 font-spacemonobold text-xl sm:m-auto"
 		>
 			EDUCACIÓN
 		</h4>
@@ -61,7 +61,7 @@ import CardVacia from "./CardVacia.astro"
 				detalles="Ilerna - Feb 2024 - Actualmente"
 				descripcion="Formación en desarrollo web full stack, con especialización en tecnologías front-end y back-end. Proyectos en equipo y prácticas en empresa."
 				posicion="2"
-				align="right"
+				align="left"
 				row="1"
 			/>
 			<CardVacia posicion="2" row="2" />
@@ -79,7 +79,7 @@ import CardVacia from "./CardVacia.astro"
 				detalles="Salesianas - Convalidacion Grado Medio"
 				descripcion="Titulo convalidado por la obtención del titulo Grado Medio en Sistemas Microinformáticos y Redes."
 				posicion="2"
-				align="right"
+				align="left"
 				row="3"
 			/>
 			<CardExp
@@ -93,3 +93,42 @@ import CardVacia from "./CardVacia.astro"
 		</div>
 	</div>
 </section>
+<style>
+	.animation {
+		opacity: 0;
+		gap: 0px;
+		transition: opacity 2s;
+	}
+
+	.scroll-animation {
+		opacity: 1;
+		animation: gapi 1s forwards;
+	}
+</style>
+
+<script>
+	function setupAnimations() {
+		const elementsToAnimate = document.querySelectorAll(".animation")
+
+		const observer = new IntersectionObserver(
+			(entries, observer) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						// Agrega la animación cuando el elemento es visible en el viewport
+						entry.target.classList.add("scroll-animation")
+
+						// Deja de observar el elemento si ya se ha animado
+						observer.unobserve(entry.target)
+					}
+				})
+			},
+			{ threshold: 0.4 } // El umbral puede ser ajustado según tu necesidad
+		)
+
+		elementsToAnimate.forEach((element) => {
+			observer.observe(element)
+		})
+	}
+
+	document.addEventListener("DOMContentLoaded", setupAnimations)
+</script>
