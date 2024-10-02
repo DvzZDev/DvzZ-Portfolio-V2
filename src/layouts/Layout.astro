@@ -45,4 +45,30 @@ const { title } = Astro.props
 		font-weight: bold;
 		font-style: normal;
 	}
+
+	body {
+		--sb-track-color: #002136;
+		--sb-thumb-color: #31546a;
+		--sb-size: 15px;
+	}
+
+	body::-webkit-scrollbar {
+		width: var(--sb-size);
+	}
+
+	body::-webkit-scrollbar-track {
+		background: var(--sb-track-color);
+		border-radius: 18px;
+	}
+
+	body::-webkit-scrollbar-thumb {
+		background: var(--sb-thumb-color);
+		border-radius: 18px;
+	}
+
+	@supports not selector(::-webkit-scrollbar) {
+		body {
+			scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+		}
+	}
 </style>
