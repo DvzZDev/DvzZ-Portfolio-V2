@@ -1,0 +1,187 @@
+---
+import ServicesCard from "./ServicesCard.astro"
+---
+
+<section class="flex flex-col items-center justify-center px-6">
+	<h2 class="my-20 mt-20 animation text-center text-5xl sm:my-28">Servicios</h2>
+	<div
+		class="justify-top grid grid-cols-1 items-center gap-10 sm:gap-y-24 gap-y-16e sm:max-w-[65rem] sm:grid-cols-2 xl:grid-cols-3"
+	>
+		<ServicesCard
+			icon={`<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="65"
+        height="65"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-wand"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M6 21l15 -15l-3 -3l-15 15l3 3" />
+        <path d="M15 6l3 3" />
+        <path d="M9 3a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
+        <path d="M19 13a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
+      </svg>`}
+			titulo="Diseño Web"
+			descripcion="Diseño web personalizado, adaptado a la preferencia específica de cada cliente."
+		/>
+		<ServicesCard
+			icon={`<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="65"
+        height="65"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M7 8l-4 4l4 4" />
+        <path d="M17 8l4 4l-4 4" />
+        <path d="M14 4l-4 16" />
+      </svg>`}
+			titulo="Desarrollo Web"
+			descripcion="Aplicaciones web a medida, utilizando tecnologías modernas y escalables."
+		/>
+		<ServicesCard
+			icon={`<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="65"
+    height="65"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="icon icon-tabler icons-tabler-outline icon-tabler-report-analytics"
+    >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+    <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+    <path d="M9 17v-5" />
+    <path d="M12 17v-1" />
+    <path d="M15 17v-3" />
+    </svg>`}
+			titulo="Seo y Analíticas"
+			descripcion="Mantenimiento y actualización de tu sitio web para que siempre esté al día."
+		/>
+		<ServicesCard
+			icon={`<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="65"
+        height="65"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-tools"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4" />
+        <path d="M14.5 5.5l4 4" />
+        <path d="M12 8l-5 -5l-4 4l5 5" />
+        <path d="M7 8l-1.5 1.5" />
+        <path d="M16 12l5 5l-4 4l-5 -5" />
+        <path d="M16 17l-1.5 1.5" />
+      </svg>`}
+			titulo="Mantenimiento"
+			descripcion="Mantén tu sitio siempre actualizado y en perfectas condiciones."
+		/>
+		<ServicesCard
+			icon={`<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="65"
+    height="65"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="icon icon-tabler icons-tabler-outline icon-tabler-settings"
+    >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path
+      d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+    />
+    <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+    </svg>`}
+			titulo="Rendimiento"
+			descripcion="Asegura una carga rápida y un rendimiento excepcional en tu sitio."
+		/>
+		<ServicesCard
+			icon={`<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="65"
+        height="65"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-brand-react"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102" />
+        <path d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102" />
+        <path d="M6.305 15.287c-.676 2.615 -.485 4.693 .695 5.373c1.913 1.105 5.703 -1.877 8.464 -6.66c.387 -.67 .733 -1.339 1.036 -2" />
+        <path d="M17.694 8.716c.677 -2.616 .487 -4.696 -.694 -5.376c-1.913 -1.105 -5.703 1.877 -8.464 6.66c-.387 .67 -.733 1.34 -1.037 2" />
+        <path d="M12 5.424c-1.925 -1.892 -3.82 -2.766 -5 -2.084c-1.913 1.104 -1.226 5.877 1.536 10.66c.386 .67 .793 1.304 1.212 1.896" />
+        <path d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897" />
+        <path d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z" />
+      </svg>`}
+			titulo="Migracion"
+			descripcion="Migra tu sitio a tecnologías modernas de forma segura y optimiza su rendimiento."
+		/>
+	</div>
+</section>
+<style>
+	.animation {
+		opacity: 0;
+		gap: 0px;
+		transition: opacity 2s;
+	}
+
+	.scroll-animation {
+		opacity: 1;
+		animation: gapi 1s forwards;
+	}
+</style>
+
+<script>
+	function setupAnimations() {
+		const elementsToAnimate = document.querySelectorAll(".animation")
+
+		const observer = new IntersectionObserver(
+			(entries, observer) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						// Agrega la animación cuando el elemento es visible en el viewport
+						entry.target.classList.add("scroll-animation")
+
+						// Deja de observar el elemento si ya se ha animado
+						observer.unobserve(entry.target)
+					}
+				})
+			},
+			{ threshold: 0.4 } // El umbral puede ser ajustado según tu necesidad
+		)
+
+		elementsToAnimate.forEach((element) => {
+			observer.observe(element)
+		})
+	}
+
+	document.addEventListener("DOMContentLoaded", setupAnimations)
+</script>

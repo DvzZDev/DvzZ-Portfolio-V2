@@ -1,0 +1,51 @@
+---
+const { icon, titulo, descripcion } = Astro.props
+---
+
+<div
+	class="animation col-span-1 flex flex-col items-center justify-center gap-5"
+>
+	<div set:html={icon} class="rounded-full bg-cyan-900 p-5" />
+	<h4 class="text-center font-spacemonobold text-3xl">{titulo}</h4>
+	<p class="text-center leading-relaxed">
+		{descripcion}
+	</p>
+</div>
+<style>
+	.animation {
+		opacity: 0;
+		transition: opacity 2s;
+	}
+
+	.scroll-animation {
+		opacity: 1;
+		animation: gapi 1s forwards;
+	}
+</style>
+
+<script>
+	function setupAnimations() {
+		const elementsToAnimate = document.querySelectorAll(".animation")
+
+		const observer = new IntersectionObserver(
+			(entries, observer) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						// Agrega la animación cuando el elemento es visible en el viewport
+						entry.target.classList.add("scroll-animation")
+
+						// Deja de observar el elemento si ya se ha animado
+						observer.unobserve(entry.target)
+					}
+				})
+			},
+			{ threshold: 0.4 } // El umbral puede ser ajustado según tu necesidad
+		)
+
+		elementsToAnimate.forEach((element) => {
+			observer.observe(element)
+		})
+	}
+
+	document.addEventListener("DOMContentLoaded", setupAnimations)
+</script>
