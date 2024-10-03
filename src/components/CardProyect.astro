@@ -1,5 +1,6 @@
 ---
 const {
+	site,
 	img1,
 	img2,
 	img3,
@@ -24,8 +25,9 @@ const {
 } = Astro.props
 ---
 
-<div
-	class="relative col-span-1 flex flex-col items-end justify-end bg-gradient-to-b from-transparent to-black"
+<a
+	href={site}
+	class="group relative col-span-1 flex flex-col items-end justify-end bg-gradient-to-b from-transparent to-black transition-all"
 >
 	<div
 		class="scroll absolute flex h-[10rem] flex-col gap-3 overflow-y-auto p-3 md:h-[13rem] lg:overflow-y-visible"
@@ -61,22 +63,56 @@ const {
 		speed={speed}
 		class="-z-10 h-full w-full"
 	>
-		<swiper-slide><img src={img1} alt="1a" /></swiper-slide>
-		<swiper-slide><img src={img2} alt="1a" /></swiper-slide>
-		<swiper-slide><img src={img3} alt="1a" /></swiper-slide>
-		<swiper-slide><img src={img4} alt="1a" /></swiper-slide>
-		<swiper-slide><img src={img5} alt="1a" /></swiper-slide>
+		<swiper-slide
+			><img
+				class="transition-all group-hover:contrast-200"
+				src={img1}
+				alt="Imagen del slider"
+			/></swiper-slide
+		>
+		<swiper-slide
+			><img
+				class="transition-all group-hover:contrast-200"
+				src={img2}
+				alt="Imagen del slider"
+			/></swiper-slide
+		>
+		<swiper-slide
+			><img
+				class="transition-all group-hover:contrast-200"
+				src={img3}
+				alt="Imagen del slider"
+			/></swiper-slide
+		>
+		<swiper-slide
+			><img
+				class="transition-all group-hover:contrast-200"
+				src={img4}
+				alt="Imagen del slider"
+			/></swiper-slide
+		>
+		<swiper-slide
+			><img
+				class="transition-all group-hover:contrast-200"
+				src={img5}
+				alt="Imagen del slider"
+			/></swiper-slide
+		>
 		{
 			img6 ? (
 				<swiper-slide>
-					<img src={img6} alt="1a" />
+					<img
+						class="transition-all group-hover:contrast-200"
+						src={img6}
+						alt="Imagen del slider"
+					/>
 				</swiper-slide>
 			) : (
 				""
 			)
 		}
 	</swiper-container>
-</div>
+</a>
 <style>
 	.scroll {
 		--sb-track-color: #1b3143;
