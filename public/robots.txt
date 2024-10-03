@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://https://dvzz.es/sitemap-index.xml
+Sitemap: https://dvzz.es/sitemap-index.xml
