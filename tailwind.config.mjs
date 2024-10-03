@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+import animations from "@midudev/tailwind-animations"
+
 export default {
 	mode: "jit", // Activar JIT
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -11,7 +14,7 @@ export default {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [animations],
 	safelist: [
 		// Lista de clases para evitar que se purguen
 		"sm:col-start-1",
@@ -24,6 +27,6 @@ export default {
 		"sm:block",
 		"sm:flex",
 		"sm:justify-center",
-		"sm:grid-rows-4"
+		"sm:grid-rows-4",
 	],
 }
