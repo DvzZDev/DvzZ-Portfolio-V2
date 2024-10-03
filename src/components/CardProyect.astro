@@ -1,0 +1,112 @@
+---
+const {
+	img1,
+	img2,
+	img3,
+	img4,
+	img5,
+	img6,
+	title,
+	parf,
+	stack1,
+	stack2,
+	stack3,
+	stack4,
+	stack5,
+	stack6,
+	stack1c,
+	stack2c,
+	stack3c,
+	stack4c,
+	stack5c,
+	stack6c,
+	speed,
+} = Astro.props
+---
+
+<div
+	class="relative col-span-1 flex flex-col items-end justify-end bg-gradient-to-b from-transparent to-black"
+>
+	<div
+		class="scroll absolute flex h-[10rem] flex-col gap-3 overflow-scroll p-3 md:h-[13rem]"
+	>
+		<h4 class="z-10 w-full font-spacemonobold text-xl md:text-2xl">{title}</h4>
+		<p class="z-10 text-[14px]">
+			{parf}
+		</p>
+		<div class="flex flex-wrap gap-1">
+			<span class:list=`rounded-full ${stack1c} p-1 px-2 md:text-xs text-[10px]`
+				>{stack1}</span
+			>
+			<span class:list=`rounded-full ${stack2c} p-1 px-2 md:text-xs text-[10px]`
+				>{stack2}</span
+			>
+			<span class:list=`rounded-full ${stack3c} p-1 px-2 md:text-xs text-[10px]`
+				>{stack3}</span
+			>
+			<span class:list=`rounded-full ${stack4c} p-1 px-2 md:text-xs text-[10px]`
+				>{stack4}</span
+			>
+			<span class:list=`rounded-full ${stack5c} p-1 px-2 md:text-xs text-[10px]`
+				>{stack5}</span
+			>
+			<span class:list=`rounded-full ${stack6c} p-1 px-2 md:text-xs text-[10px]`
+				>{stack6}</span
+			>
+		</div>
+	</div>
+	<swiper-container
+		autoplay="true"
+		loop="true"
+		speed={speed}
+		class="-z-10 h-full w-full"
+	>
+		<swiper-slide><img src={img1} alt="1a" /></swiper-slide>
+		<swiper-slide><img src={img2} alt="1a" /></swiper-slide>
+		<swiper-slide><img src={img3} alt="1a" /></swiper-slide>
+		<swiper-slide><img src={img4} alt="1a" /></swiper-slide>
+		<swiper-slide><img src={img5} alt="1a" /></swiper-slide>
+		{
+			img6 ? (
+				<swiper-slide>
+					<img src={img6} alt="1a" />
+				</swiper-slide>
+			) : (
+				""
+			)
+		}
+	</swiper-container>
+</div>
+<script
+	src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
+></script>
+<style>
+	.scroll {
+		--sb-track-color: #1b3143;
+		--sb-thumb-color: #2b5b79;
+		--sb-size: 2px;
+
+		&::-webkit-scrollbar {
+			width: var(--sb-size);
+		}
+
+		&::-webkit-scrollbar-track {
+			background: var(--sb-track-color);
+			border-radius: 3px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: var(--sb-thumb-color);
+			border-radius: 3px;
+		}
+
+		&::-webkit-scrollbar:horizontal {
+			display: none;
+		}
+
+		@supports not selector(::-webkit-scrollbar) {
+			scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+			scrollbar-width: thin;
+		}
+	}
+</style>
