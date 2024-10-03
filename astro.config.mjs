@@ -5,7 +5,9 @@ import tailwind from "@astrojs/tailwind"
 
 import playformCompress from "@playform/compress"
 
-// https://astro.build/config
+import sitemap from "@astrojs/sitemap"
+
 export default defineConfig({
-	integrations: [tailwind(), playformCompress()],
+	site: "https://dvzz.es",
+	integrations: [tailwind(), playformCompress(), sitemap()],
 })
