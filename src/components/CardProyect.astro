@@ -77,9 +77,6 @@ const {
 		}
 	</swiper-container>
 </div>
-<script
-	src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
-></script>
 <style>
 	.scroll {
 		--sb-track-color: #1b3143;
@@ -109,4 +106,17 @@ const {
 			scrollbar-width: thin;
 		}
 	}
+
+	.animation {
+		opacity: 0;
+		transition: opacity 2s;
+	}
+
+	.scroll-animation {
+		opacity: 1;
+	}
 </style>
+<script
+	is:inline
+	src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
+></script>

@@ -3,7 +3,7 @@ import CardProyect from "./CardProyect.astro"
 ---
 
 <section
-	class="animation mb-32 flex flex-col items-center justify-center overflow-visible px-6"
+	class="animation animation mb-32 flex flex-col items-center justify-center overflow-visible px-6"
 >
 	<h2 class="my-20 mt-20 text-center text-5xl sm:my-28">Proyectos</h2>
 	<div
@@ -56,3 +56,42 @@ import CardProyect from "./CardProyect.astro"
 		/>
 	</div>
 </section>
+<style>
+	.animation {
+		opacity: 0;
+		gap: 0px;
+		transition: opacity 2s;
+	}
+
+	.scroll-animation {
+		opacity: 1;
+		animation: gapi 1s forwards;
+	}
+</style>
+
+<script>
+	function setupAnimations() {
+		const elementsToAnimate = document.querySelectorAll(".animation")
+
+		const observer = new IntersectionObserver(
+			(entries, observer) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						// Agrega la animación cuando el elemento es visible en el viewport
+						entry.target.classList.add("scroll-animation")
+
+						// Deja de observar el elemento si ya se ha animado
+						observer.unobserve(entry.target)
+					}
+				})
+			},
+			{ threshold: 0.3 } // El umbral puede ser ajustado según tu necesidad
+		)
+
+		elementsToAnimate.forEach((element) => {
+			observer.observe(element)
+		})
+	}
+
+	document.addEventListener("DOMContentLoaded", setupAnimations)
+</script>
