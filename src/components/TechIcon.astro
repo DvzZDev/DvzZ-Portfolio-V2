@@ -1,0 +1,13 @@
+---
+const iconHtml = await Astro.slots.render("default")
+---
+
+<div
+	class="animation relative col-span-1 flex size-16 items-center justify-center transition-transform sm:size-20"
+>
+	<div
+		class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-150 opacity-80 blur-lg [&>svg]:w-[45px]"
+		set:html={iconHtml}
+	/>
+	<div class="relative z-10 [&>svg]:w-[45px]" set:html={iconHtml} />
+</div>

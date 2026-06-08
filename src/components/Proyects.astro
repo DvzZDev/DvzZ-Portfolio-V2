@@ -1,14 +1,29 @@
 ---
 import CardProyect from "./CardProyect.astro"
+import CardProyectVideo from "./CardProyectVideo.astro"
 ---
 
 <section
-	class="animation animation flex flex-col items-center justify-center overflow-visible px-6"
+	class="animation flex flex-col items-center justify-center overflow-visible px-6"
 >
 	<h2 class="my-20 mt-20 text-center text-5xl sm:my-28">Proyectos</h2>
 	<div
 		class="grid max-w-[60rem] grid-cols-1 items-center justify-center gap-10 md:grid-cols-2"
 	>
+		<CardProyectVideo
+			site="https://linktr.ee/acuanet"
+			video="/aquanetReel.mp4"
+			title="AquaNet"
+			parf="App móvil dedicada para pescadores españoles con más de 1.000 usuarios activos. La app permite a los usuarios registrar sus capturas y acceder rápidamente a información hidrológica y meteorológica de sus embalses favoritos."
+			stack1="React Native"
+			stack2="Expo"
+			stack3="Supabase"
+			stack4="RevenueCat"
+			stack1c="bg-cyan-500/60"
+			stack2c="bg-black/60"
+			stack3c="bg-emerald-500/60"
+			stack4c="bg-rose-400/60"
+		/>
 		<CardProyect
 			site="https://agrbaits.com"
 			img1="1.webp"
@@ -16,15 +31,13 @@ import CardProyect from "./CardProyect.astro"
 			img3="3.webp"
 			img4="4.webp"
 			img5="5.webp"
-			img6="6.webp"
 			title="AGR Baits"
-			parf="Web creada para los compañeros de AGR Baits, una empresa española especializada en el desarrollo de señuelos de pesca, donde actualmente me encuentro ayudando como desarrollador."
+			parf="Página web completa con todos los productos de una de las principales marcas de pesca en España AGR Baits. Se ha diseñado toda la arquitectura digital de la empresa, desde una app para las personas patrocinadas hasta organización de torneos."
 			stack1="Astro"
 			stack2="React"
-			stack3="Tailwind"
-			stack4="Turso"
-			stack5="Typescript"
-			stack6="Vercel"
+			stack3="Typescript"
+			stack4="Supabase"
+			stack5="Vercel"
 			stack1c="bg-teal-500/60"
 			stack2c="bg-orange-400/60"
 			stack3c="bg-blue-400/60"
@@ -33,41 +46,16 @@ import CardProyect from "./CardProyect.astro"
 			stack6c="bg-black"
 			speed="500"
 		/>
-		<CardProyect
-			site="https://acuanet.es"
-			img1="10.webp"
-			img2="11.webp"
-			img3="12.webp"
-			img4="13.webp"
-			img5="14.webp"
-			title="AcuaNet"
-			parf="Aplicación web diseñada para consultar en tiempo real las mediciones hidrográficas de España, incluyendo el estado de embalses, cuencas y pluviómetros."
-			stack1="NextJs"
-			stack2="React"
-			stack3="Tailwind"
-			stack4="MySql"
-			stack5="Express"
-			stack6="Vercel"
-			stack1c="bg-blue-800/60"
-			stack2c="bg-blue-400/60"
-			stack3c="bg-teal-500/60"
-			stack4c="bg-orange-400/60"
-			stack5c="bg-yellow-300/60"
-			stack6c="bg-black"
-			speed="800"
-		/>
 	</div>
 </section>
 <style>
 	.animation {
 		opacity: 0;
-		gap: 0px;
 		transition: opacity 2s;
 	}
 
 	.scroll-animation {
 		opacity: 1;
-		animation: gapi 1s forwards;
 	}
 </style>
 

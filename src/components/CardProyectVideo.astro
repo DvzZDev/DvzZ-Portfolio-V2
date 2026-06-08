@@ -1,0 +1,133 @@
+---
+const {
+	site,
+	video,
+	title,
+	parf,
+	stack1,
+	stack2,
+	stack3,
+	stack4,
+	stack5,
+	stack6,
+	stack1c,
+	stack2c,
+	stack3c,
+	stack4c,
+	stack5c,
+	stack6c,
+} = Astro.props
+---
+
+<a
+	href={site}
+	class="group relative col-span-1 flex aspect-square flex-col items-end justify-end bg-gradient-to-b from-transparent to-black transition-all"
+	referrerpolicy="no-referrer"
+	target="_blank"
+>
+	<video
+		class="absolute inset-0 -z-10 h-full w-full object-cover"
+		autoplay
+		loop
+		muted
+		playsinline
+		disableRemotePlayback
+	>
+		<source src={video} type="video/mp4" />
+	</video>
+
+	<div
+		class="scroll flex h-[10rem] flex-col gap-3 overflow-y-auto p-3 md:h-[13rem] lg:overflow-y-visible"
+	>
+		<h4 class="z-10 w-full font-spacemonobold text-xl md:text-2xl">{title}</h4>
+		<p class="z-10 text-[14px]">
+			{parf}
+		</p>
+		<div class="flex flex-wrap gap-1">
+			{
+				stack1 && (
+					<span
+						class:list={`rounded-full ${stack1c} p-1 px-2 text-[10px] md:text-xs`}
+					>
+						{stack1}
+					</span>
+				)
+			}
+			{
+				stack2 && (
+					<span
+						class:list={`rounded-full ${stack2c} p-1 px-2 text-[10px] md:text-xs`}
+					>
+						{stack2}
+					</span>
+				)
+			}
+			{
+				stack3 && (
+					<span
+						class:list={`rounded-full ${stack3c} p-1 px-2 text-[10px] md:text-xs`}
+					>
+						{stack3}
+					</span>
+				)
+			}
+			{
+				stack4 && (
+					<span
+						class:list={`rounded-full ${stack4c} p-1 px-2 text-[10px] md:text-xs`}
+					>
+						{stack4}
+					</span>
+				)
+			}
+			{
+				stack5 && (
+					<span
+						class:list={`rounded-full ${stack5c} p-1 px-2 text-[10px] md:text-xs`}
+					>
+						{stack5}
+					</span>
+				)
+			}
+			{
+				stack6 && (
+					<span
+						class:list={`rounded-full ${stack6c} p-1 px-2 text-[10px] md:text-xs`}
+					>
+						{stack6}
+					</span>
+				)
+			}
+		</div>
+	</div>
+</a>
+<style>
+	.scroll {
+		--sb-track-color: #1b3143;
+		--sb-thumb-color: #2b5b79;
+		--sb-size: 2px;
+
+		&::-webkit-scrollbar {
+			width: var(--sb-size);
+		}
+
+		&::-webkit-scrollbar-track {
+			background: var(--sb-track-color);
+			border-radius: 3px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: var(--sb-thumb-color);
+			border-radius: 3px;
+		}
+
+		&::-webkit-scrollbar:horizontal {
+			display: none;
+		}
+
+		@supports not selector(::-webkit-scrollbar) {
+			scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+			scrollbar-width: thin;
+		}
+	}
+</style>

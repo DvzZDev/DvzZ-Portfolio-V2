@@ -54,33 +54,42 @@ import CardVacia from "./CardVacia.astro"
 		>
 			EDUCACIÓN
 		</h4>
-		<div class="flex w-full grid-cols-2 flex-col sm:grid sm:grid-rows-3">
-			<CardVacia posicion="1" row="1" />
+		<div class="flex w-full grid-cols-2 flex-col sm:grid sm:grid-rows-5">
+			<CardExp
+				puesto="Ingeniería Informática"
+				detalles="UOC - Sept 2026 - Actualmente"
+				descripcion="Cursando actualmente Ingeniería Informática en la Universidad Oberta de Catalunya."
+				posicion="1"
+				align="right"
+				row="1"
+			/>
+			<CardVacia posicion="2" row="1" />
+			<CardVacia posicion="1" row="2" />
 			<CardExp
 				puesto="Grado Superior en Desarrollo de Aplicaciones Web"
-				detalles="Ilerna - Feb 2024 - Actualmente"
+				detalles="Ilerna - Feb 2024 - Jun 2026"
 				descripcion="Formación en desarrollo web full stack, con especialización en tecnologías front-end y back-end. Proyectos en equipo y prácticas en empresa."
 				posicion="2"
 				align="left"
-				row="1"
+				row="2"
 			/>
-			<CardVacia posicion="2" row="2" />
 			<CardExp
 				puesto="Grado Medio en Sistemas Microinformáticos y Redes"
 				detalles="Salesianas Plz. Castilla - Sep 2021 - Jun 2023"
 				descripcion="Formación integral en montaje y mantenimiento de equipos, redes, sistemas operativos y bases en ciberseguridad, concluida con prácticas en empresa => Ferrovial Es."
 				posicion="1"
 				align="right"
-				row="2"
+				row="3"
 			/>
-			<CardVacia posicion="1" row="3" />
+			<CardVacia posicion="2" row="3" />
+			<CardVacia posicion="1" row="4" />
 			<CardExp
 				puesto="Educación Secundaria Obligatoria"
-				detalles="Salesianas Plz. Castilla - Convalidacion Grado Medio"
-				descripcion="Titulo convalidado por la obtención del titulo Grado Medio en Sistemas Microinformáticos y Redes."
+				detalles="Salesianas Plz. Castilla - Convalidación Grado Medio"
+				descripcion="Título convalidado por la obtención del título Grado Medio en Sistemas Microinformáticos y Redes."
 				posicion="2"
 				align="left"
-				row="3"
+				row="4"
 			/>
 			<CardExp
 				puesto="Formación Profesional Básica en Informática"
@@ -88,21 +97,26 @@ import CardVacia from "./CardVacia.astro"
 				descripcion="Formación en informática básica, ofimática y primeros pasos en programación."
 				posicion="1"
 				align="right"
-				row="4"
+				row="5"
 			/>
+			<CardVacia posicion="2" row="5" />
 		</div>
 	</div>
 </section>
 <style>
 	.animation {
 		opacity: 0;
-		gap: 0px;
 		transition: opacity 2s;
 	}
 
 	.scroll-animation {
 		opacity: 1;
-		animation: gapi 1s forwards;
+		animation: fadeIn 1s forwards;
+	}
+
+	@keyframes fadeIn {
+		from { opacity: 0; transform: translateY(20px); }
+		to { opacity: 1; transform: translateY(0); }
 	}
 </style>
 

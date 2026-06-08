@@ -3,32 +3,10 @@ import ServicesCard from "./ServicesCard.astro"
 ---
 
 <section class="flex flex-col items-center justify-center px-6">
-	<h2 class="my-20 mt-20 animation text-center text-5xl sm:my-28">Servicios</h2>
+	<h2 class="animation my-20 mt-20 text-center text-5xl sm:my-28">Servicios</h2>
 	<div
-		class="justify-top grid grid-cols-1 items-center gap-10 sm:gap-y-24 gap-y-16e sm:max-w-[65rem] sm:grid-cols-2 xl:grid-cols-3"
+		class="grid grid-cols-1 items-start gap-10 sm:max-w-[65rem] sm:grid-cols-2 sm:gap-y-24 xl:grid-cols-3"
 	>
-		<ServicesCard
-			icon={`<svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="65"
-        height="65"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="icon icon-tabler icons-tabler-outline icon-tabler-wand"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M6 21l15 -15l-3 -3l-15 15l3 3" />
-        <path d="M15 6l3 3" />
-        <path d="M9 3a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
-        <path d="M19 13a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
-      </svg>`}
-			titulo="Diseño Web"
-			descripcion="Diseño web personalizado, adaptado a la preferencia específica de cada cliente."
-		/>
 		<ServicesCard
 			icon={`<svg
         xmlns="http://www.w3.org/2000/svg"
@@ -70,8 +48,30 @@ import ServicesCard from "./ServicesCard.astro"
     <path d="M12 17v-1" />
     <path d="M15 17v-3" />
     </svg>`}
-			titulo="Seo y Analíticas"
-			descripcion="Mantenimiento y actualización de tu sitio web para que siempre esté al día."
+			titulo="Desarrollo Móvil"
+			descripcion="Desarrollo a medida de aplicaciones móviles para iOS y Android."
+		/>
+		<ServicesCard
+			icon={`<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="65"
+        height="65"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-wand"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M6 21l15 -15l-3 -3l-15 15l3 3" />
+        <path d="M15 6l3 3" />
+        <path d="M9 3a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
+        <path d="M19 13a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
+      </svg>`}
+			titulo="Diseño Gráfico"
+			descripcion="Diseño web personalizado, adaptado a la preferencia específica de cada cliente."
 		/>
 		<ServicesCard
 			icon={`<svg
@@ -141,7 +141,7 @@ import ServicesCard from "./ServicesCard.astro"
         <path d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897" />
         <path d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z" />
       </svg>`}
-			titulo="Migracion"
+			titulo="Migración"
 			descripcion="Migra tu sitio a tecnologías modernas de forma segura y optimiza su rendimiento."
 		/>
 	</div>
@@ -149,13 +149,11 @@ import ServicesCard from "./ServicesCard.astro"
 <style>
 	.animation {
 		opacity: 0;
-		gap: 0px;
 		transition: opacity 2s;
 	}
 
 	.scroll-animation {
 		opacity: 1;
-		animation: gapi 1s forwards;
 	}
 </style>
 

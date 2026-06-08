@@ -24,9 +24,12 @@ export default {
 		"sm:row-start-1",
 		"sm:row-start-2",
 		"sm:row-start-3",
+		"sm:row-start-4",
+		"sm:row-start-5",
 		"sm:block",
 		"sm:flex",
 		"sm:justify-center",
-		"sm:grid-rows-4",
+		"sm:grid-rows-3",
+		"sm:grid-rows-5",
 	],
 }
