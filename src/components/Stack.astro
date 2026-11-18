@@ -15,7 +15,10 @@ import { techStack } from "@/data/tech"
 	>
 		{
 			techStack.map((tech, i) => (
-				<li class="tech flex items-center gap-3 bg-[#03071b] px-4 py-5 sm:px-5" style={`--i: ${i}`}>
+				<li
+					class="tech flex items-center gap-3 bg-[#03071b] px-4 py-5 last:col-span-2 last:justify-center sm:px-5 sm:last:col-span-4"
+					style={`--i: ${i}`}
+				>
 					<span
 						class="flex size-8 shrink-0 items-center justify-center [&>svg]:h-7 [&>svg]:w-7"
 						aria-hidden="true"
