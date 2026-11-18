@@ -9,5 +9,15 @@ import sitemap from "@astrojs/sitemap"
 
 export default defineConfig({
 	site: "https://dvzz.es",
-	integrations: [tailwind(), playformCompress(), sitemap()],
+	integrations: [
+		tailwind(),
+		playformCompress({
+			HTML: {
+				"html-minifier-terser": {
+					removeAttributeQuotes: false,
+				},
+			},
+		}),
+		sitemap(),
+	],
 })

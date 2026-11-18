@@ -5,6 +5,11 @@ interface Props {
 }
 
 const { title } = Astro.props
+
+const siteUrl = "https://dvzz.netlify.app"
+const ogImage = `${siteUrl}/OG.png`
+const description =
+	"Desarrollador full stack junior especializado en JavaScript, TypeScript, React y Node.js. Portfolio de David Esteban García."
 ---
 
 <!doctype html>
@@ -17,20 +22,14 @@ const { title } = Astro.props
 
 		<!-- HTML Meta Tags -->
 		<title>{title}</title>
-		<meta
-			name="description"
-			content="David Esteban García, desarrollador fullstack junior especializado en JavaScript y TypeScript. Conóceme más de cerca visitando mi portfolio."
-		/>
+		<meta name="description" content={description} />
 
 		<!-- Facebook Meta Tags -->
-		<meta property="og:url" content={"https://www.dvzz.es/"} />
+		<meta property="og:url" content={`${siteUrl}/`} />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />
-		<meta
-			property="og:description"
-			content="David Esteban García, desarrollador fullstack junior especializado en JavaScript y TypeScript. Conóceme más de cerca visitando mi portfolio."
-		/>
-		<meta property="og:image" content="https://www.dvzz.es/OG.png" />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImage} />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 		<meta property="og:image:type" content="image/png" />
@@ -38,14 +37,11 @@ const { title } = Astro.props
 
 		<!-- Twitter Meta Tags -->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta property="twitter:domain" content="dvzz.es" />
-		<meta property="twitter:url" content={"https://www.dvzz.es/"} />
+		<meta property="twitter:domain" content="dvzz.netlify.app" />
+		<meta property="twitter:url" content={`${siteUrl}/`} />
 		<meta name="twitter:title" content={title} />
-		<meta
-			name="twitter:description"
-			content="David Esteban García, desarrollador fullstack junior especializado en JavaScript y TypeScript. Conóceme más de cerca visitando mi portfolio."
-		/>
-		<meta name="twitter:image" content="https://www.dvzz.es/OG.png" />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImage} />
 	</head>
 
 	<body>
