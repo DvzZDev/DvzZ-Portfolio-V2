@@ -1,20 +1,20 @@
-<section class="flex flex-col items-center justify-center px-6">
-	<h2 class="my-20 text-center text-5xl sm:my-28">¿Quién Soy?</h2>
+<section class="about-section flex flex-col items-center justify-center px-6">
+	<h2 class="about-title my-20 text-center text-5xl sm:my-28">¿Quién Soy?</h2>
 	<div class="flex flex-col gap-12 sm:flex-row sm:gap-20">
 		<div class="flex w-fit flex-col gap-4">
-			<div class="flex gap-2">
+			<div class="about-item flex gap-2" style="--i: 0">
 				<h4 class="font-bold">Nombre:</h4>
 				<p class="text-gray-300">David Esteban Garcia</p>
 			</div>
-			<div class="flex gap-2">
+			<div class="about-item flex gap-2" style="--i: 1">
 				<h4 class="font-bold">Alias:</h4>
 				<p class="text-gray-300">DvzZ</p>
 			</div>
-			<div class="flex gap-2">
+			<div class="about-item flex gap-2" style="--i: 2">
 				<h4 class="font-bold">Email:</h4>
 				<p class="text-gray-300">estebandavid578@gmail.com</p>
 			</div>
-			<div class="flex gap-2">
+			<div class="about-item flex gap-2" style="--i: 3">
 				<h4 class="font-bold">Ubicación:</h4>
 				<p class="text-gray-300">Madrid, España</p>
 				<span>
@@ -114,7 +114,7 @@
 					>
 				</span>
 			</div>
-			<div class="flex gap-2">
+			<div class="about-item flex gap-2" style="--i: 4">
 				<h4 class="font-bold">Idiomas:</h4>
 				<p class="text-gray-300">Es</p>
 				<span>
@@ -276,7 +276,7 @@
 					>
 				</span>
 			</div>
-			<div class="flex gap-2">
+			<div class="about-item flex gap-2" style="--i: 5">
 				<h4 class="font-bold">Currículum:</h4>
 				<button>
 					<a
@@ -307,7 +307,7 @@
 			</div>
 		</div>
 
-		<div class="max-w-[45rem]">
+		<div class="about-bio max-w-[45rem]">
 			<h4 class="text-3xl">¡Hola👋, soy David!</h4>
 			<p class="mt-6 leading-relaxed text-gray-300">
 				A mis 22 años, soy un desarrollador junior especializado en desarrollo
@@ -328,7 +328,7 @@
 			<div class="mt-7 flex gap-6">
 				<!-- INSTAGRAM -->
 				<a
-					class="rounded-md border border-gray-600 p-[6px] transition-all hover:scale-125"
+					class="rounded-md border border-white/15 p-[6px] transition-all hover:scale-125"
 					href="https://www.instagram.com/dvzz.dev/"
 					aria-label="Instagram"
 				>
@@ -345,7 +345,7 @@
 				</a>
 				<!-- TWITTER / X -->
 				<a
-					class="rounded-md border border-gray-600 p-[6px] transition-all hover:scale-125"
+					class="rounded-md border border-white/15 p-[6px] transition-all hover:scale-125"
 					href="https://x.com/DvzZ_Dev"
 					aria-label="Twitter / X"
 				>
@@ -363,7 +363,7 @@
 				</a>
 				<!-- GITHUB -->
 				<a
-					class="rounded-md border border-gray-600 p-[6px] transition-all hover:scale-125"
+					class="rounded-md border border-white/15 p-[6px] transition-all hover:scale-125"
 					href="https://github.com/DvzZDev"
 					aria-label="GitHub"
 				>
@@ -382,7 +382,7 @@
 				</a>
 				<!-- LINKEDIN -->
 				<a
-					class="rounded-md border border-gray-600 p-[6px] transition-all hover:scale-125"
+					class="rounded-md border border-white/15 p-[6px] transition-all hover:scale-125"
 					href="https://es.linkedin.com/in/davidestebang"
 					aria-label="LinkedIn"
 				>
@@ -399,7 +399,7 @@
 				</a>
 				<!-- WAKATIME -->
 				<a
-					class="rounded-md border border-gray-600 p-[6px] transition-all hover:scale-125"
+					class="rounded-md border border-white/15 p-[6px] transition-all hover:scale-125"
 					href="https://wakatime.com/@DvzZ"
 					aria-label="Wakatime"
 				>
@@ -419,3 +419,103 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	.about-title,
+	.about-item,
+	.about-bio {
+		opacity: 0;
+	}
+
+	.about-title {
+		transform: translateY(16px);
+	}
+
+	.about-item {
+		transform: translateX(-14px);
+	}
+
+	.about-bio {
+		transform: translateX(14px);
+	}
+
+	.about-section.is-visible .about-title {
+		animation: about-fade-up 500ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+	}
+
+	.about-section.is-visible .about-item {
+		animation: about-fade-left 420ms cubic-bezier(0.23, 1, 0.32, 1)
+			calc(120ms + var(--i) * 45ms) forwards;
+	}
+
+	.about-section.is-visible .about-bio {
+		animation: about-fade-right 520ms cubic-bezier(0.23, 1, 0.32, 1) 180ms
+			forwards;
+	}
+
+	@keyframes about-fade-up {
+		from {
+			opacity: 0;
+			transform: translateY(16px);
+		}
+		to {
+			opacity: 1;
+			transform: none;
+		}
+	}
+
+	@keyframes about-fade-left {
+		from {
+			opacity: 0;
+			transform: translateX(-14px);
+		}
+		to {
+			opacity: 1;
+			transform: none;
+		}
+	}
+
+	@keyframes about-fade-right {
+		from {
+			opacity: 0;
+			transform: translateX(14px);
+		}
+		to {
+			opacity: 1;
+			transform: none;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.about-title,
+		.about-item,
+		.about-bio {
+			opacity: 1;
+			transform: none;
+		}
+
+		.about-section.is-visible .about-title,
+		.about-section.is-visible .about-item,
+		.about-section.is-visible .about-bio {
+			animation: none;
+		}
+	}
+</style>
+
+<script>
+	const about = document.querySelector(".about-section")
+	const aboutTitle = document.querySelector(".about-title")
+
+	if (about && aboutTitle) {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				if (!entries[0].isIntersecting) return
+				about.classList.add("is-visible")
+				observer.disconnect()
+			},
+			{ threshold: 0.8 }
+		)
+
+		observer.observe(aboutTitle)
+	}
+</script>
